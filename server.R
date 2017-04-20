@@ -28,7 +28,7 @@ library(e1071)
 
 predictions2017.df <- read.csv("predictions2017.df.csv")
 
-predictions2017.df <- predictions2017[predictions2017$Major >=0.5,]
+predictions2017.df <- predictions2017.df[predictions2017.df$Major >=0.5,]
 uniqpredictions2017.df <- predictions2017.df[!duplicated(predictions2017.df$address),]
 
 my_crime_Data_final2016 <- read.csv("second_crimeData_final2016.csv")
